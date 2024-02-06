@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "data passed from command line is $1"
 
-if test -f $1
+if test -x $1
 then
-	echo "it is file"
+	echo "it is executable file"
 	
-elif test -x $1
+elif test -f $1
 then
-	echo "file is executable"
+	echo "it is normal file"
 	
 elif test -d $1
 then
